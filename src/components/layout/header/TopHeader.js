@@ -114,8 +114,14 @@ const TopHeader = () => {
           ))}
         </ul>
         <div className="border-slate-800 border-t py-2 flex justify-center gap-3 items-center ">
-          <Link to='/login'>Sign Up</Link>
-          <Link to='/login' className="bg-rose-700 py-1.5 px-3 rounded-2xl text-white">
+          <Link to="/login" onClick={() => setIsOpen(false)}>
+            Sign Up
+          </Link>
+          <Link
+            onClick={() => setIsOpen(false)}
+            to="/login"
+            className="bg-rose-700 py-1.5 px-3 rounded-2xl text-white"
+          >
             Login
           </Link>
         </div>
