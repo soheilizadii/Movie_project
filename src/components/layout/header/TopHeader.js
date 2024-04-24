@@ -66,7 +66,7 @@ const TopHeader = () => {
           </ul>
         </nav>
         {user ? (
-          <div className="flex gap-2 ml-auto">
+          <div className="md:flex gap-2 ml-auto hidden ">
             <span>{user.username}</span>
             <button className="text-rose-500" onClick={submit}>
               Logout

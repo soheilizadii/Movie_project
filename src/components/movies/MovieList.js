@@ -15,8 +15,8 @@ const MovieList = ({ movies, credits, formatVote2, type }) => {
               className="flex my-4 text-slate-300 bg-[#25344d4a] rounded p-2 flex-col md:flex-row"
             >
               <img
-                src={`${BASE_IMG}/w185/${item.poster_path}`}
-                className="md:h-full h-[250px] md:w-[150px] w-full rounded "
+                src={`${BASE_IMG}/w342/${item.poster_path}`}
+                className="md:h-full h-[300px] md:w-[150px] w-full rounded "
               />
               <div className="  pl-4  ">
                 <div className="border-b border-slate-500 pb-3  flex flex-col gap-2.5">
@@ -26,7 +26,11 @@ const MovieList = ({ movies, credits, formatVote2, type }) => {
                       (
                       {item.release_date
                         ? item.release_date.split("-")[0]
-                        : item.first_air_date.split("-")[0]}
+                        : null}
+                      ) (
+                      {item.first_air_date
+                        ? item.first_air_date.split("-")[0]
+                        : null}
                       )
                     </span>
                   </div>

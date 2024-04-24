@@ -3,11 +3,12 @@ import FollowUs from "./header/FollowUs";
 
 import TopHeader from "./header/TopHeader";
 import slider from "../../assests/slider-bg.jpg";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "./header/Slider";
 import { useLocation } from "react-router-dom";
 import SearchBox from "../searchBox/SearchBox";
 import Footer from "./header/Footer";
+import Loading from "../Loading";
 const Layout = ({ children }) => {
   const [bg, setBg] = useState(slider);
   const [renderFooter, setRenderFooter] = useState(false);
@@ -17,8 +18,9 @@ const Layout = ({ children }) => {
     setRenderFooter(true);
     setTimeout(() => {
       setRenderFooter(false);
-    }, 2000);
+    }, 3000);
   }, [location.pathname]);
+
   const isTvOrMovieDetailPage = (path) => {
     return /\/(tv|movies)\/\d+\/?$/.test(path);
   };
@@ -48,7 +50,9 @@ const Layout = ({ children }) => {
           </header>
         </div>
       </div>
-      {children}
+      {React.Children.map(children, (child) =>
+        React.cloneElement(child, { setRenderFooter })
+      )}
       {!renderFooter && <Footer />}
     </>
   );

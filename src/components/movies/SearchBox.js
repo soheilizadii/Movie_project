@@ -63,15 +63,15 @@ const SearchBox = ({
       <div className="flex gap-3 text-[18px]">
         <button
           className="border-l border-slate-500 pl-2 hidden md:block hover:text-green-600"
-          onClick={() => setListMovie("grid")}
-        >
-          <BsFillGrid3X3GapFill />
-        </button>
-        <button
-          className="border-l border-slate-500 pl-2 hidden md:block hover:text-green-600"
           onClick={() => setListMovie("list")}
         >
           <FaRegListAlt />
+        </button>
+        <button
+          className="border-l border-slate-500 pl-2 hidden md:block hover:text-green-600"
+          onClick={() => setListMovie("grid")}
+        >
+          <BsFillGrid3X3GapFill />
         </button>
       </div>
     </div>

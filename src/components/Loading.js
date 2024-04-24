@@ -2,7 +2,7 @@ import { RotatingLines } from "react-loader-spinner";
 
 const Loading = () => {
   return (
-    <div className="flex absolute w-full h-full justify-center items-center">
+    <div className="flex fixed w-full bg-slate-800 z-10 h-full justify-center items-center">
       <RotatingLines
         visible={true}
         height="96"

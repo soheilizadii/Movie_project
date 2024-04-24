@@ -4,7 +4,8 @@ import Loading from "../components/Loading";
 import MovieListSlider from "../components/MovieListSlider";
 import { API_KEY, BASE_URL } from "../config/api-config";
 
-const Home = () => {
+const Home = ({ setRenderFooter }) => {
+  console.log("value is", setRenderFooter);
   const [categoryMovie, setCategoryMovie] = useState("popular");
   const [categoryTv, setCategoryTv] = useState("airing_today");
   const [movies, setMovies] = useState([]);
@@ -21,8 +22,16 @@ const Home = () => {
       const res = await axios.get(`${BASE_URL}/tv/${categoryTv}?${API_KEY}`);
       setTv(res.data.results);
       setIsLoading(false);
+
+      // setTimeout(() => {
+      //   setRenderFooter(false);
+      // }, 2000);
     }
     GET_MOVIE();
+
+    // return () => {
+    //   setRenderFooter(true); // This is the correct way to provide a cleanup function
+    // };
   }, [categoryMovie, categoryTv]);
 
   return !isloading ? (

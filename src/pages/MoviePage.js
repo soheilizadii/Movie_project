@@ -201,9 +201,9 @@ const MoviePage = ({ type }) => {
       </div>
       <div className="container  flex flex-col md:grid md:grid-cols-4  w-11/12 sm:w-10/12 my-10 ">
         <div className=" col-span-3 ">
-          <div className="flex-col overflow-x-scroll  overflow-hidden">
+          <div className="flex-col overflow-hidden ">
             <h1 className="text-2xl mb-5 font-bold">Top Billed Cast </h1>
-            <div className="flex gap-5 ">
+            <div className="flex gap-5  overflow-x-scroll ">
               {credits.cast &&
                 credits.cast.slice(0, 10).map((item) => (
                   <Link

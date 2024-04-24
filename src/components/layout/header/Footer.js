@@ -60,7 +60,7 @@ const Footer = () => {
             <input placeholder="Enter your Email" className="bg-transparent " />
             <IoMailOutline />
           </div>
-          <p className="text-red-800 font-bold mt-3">Subscribe now </p>
+          <p className="text-red-800 font-bold mt-3 mb-10">Subscribe now </p>
         </div>
       </div>
     </footer>
