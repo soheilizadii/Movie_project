@@ -45,7 +45,7 @@ const PersonList = () => {
                       ? `${BASE_IMG}/original/${item.profile_path}`
                       : `/no_profile.png`
                   }
-                  className="w-full h-[200px] rounded-tl-lg rounded-tr-lg "
+                  className="w-full  h-[300px] md:h-[200px] rounded-tl-lg rounded-tr-lg "
                 />
                 <h1 className="text-slate-300 py-2 flex justify-center text-lg ">
                   {item.name}
